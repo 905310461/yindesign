@@ -1,0 +1,575 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: '微软雅黑';
+	
+}
+a{
+	text-decoration: none;
+
+}
+ul li{
+	list-style: none;
+}
+
+img{
+	border: none;
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+input,textarea,select,a:focus {
+     outline: none;
+}
+.clgap{
+	clear: both;
+	width: 100%;
+	height: 5px;
+	background: #f0f0f0;
+}
+.clear{
+	clear: both;
+}
+
+
+.layout{
+	width: 20rem;
+	height: auto;
+	padding-bottom: 3.7rem;
+	margin: 0 auto;
+}
+
+.head_box{
+	width: 20rem;
+	height: auto;
+	background: #dec48b;
+	position: relative;
+}
+.uinfo_con{
+	width: 100%;
+	height: 6rem;
+	
+	padding: 1.8rem 6rem;
+	
+}
+.uinfo_con ul li{
+	display: block;
+	width: 100%;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	color: #fff;
+	font-size: 0.72rem;
+}
+
+
+.u_headimg{
+	width: 3.9rem;
+	height: 3.9rem;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 1.8rem;
+	left: 1.2rem;
+}
+.u_headimg img{
+	display: block;
+	width: 100%;
+	border-radius: 50%;
+}
+.h_ewm{
+	width: 1.4rem;
+	height: 1.4rem;
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	border-radius: 5px;
+	background: url(../images/hhewm.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.daysign{
+	display: block;
+	width: 5.4rem;
+	height: 1.6rem;
+	background: #be984d;
+	position: absolute;
+	top: 3.0rem;
+	right:0.5rem;
+	border-radius: 0.8rem;
+
+}
+.signcon{
+	width: 100%;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.68rem;
+	color: #ffe9bd;
+	padding-left: 1.8rem;
+}
+.signcon::before{
+	content: '';
+	width: 0.8rem;
+	height: 0.8rem;
+	background: url(../images/daysign.png) no-repeat 0 0;
+	background-size: cover; 
+	position: absolute;
+	top: 0.4rem;
+	left: 0.6rem;
+}
+
+.upayde{
+	width: 20rem;
+	height: 4.09375rem;
+	background: url(../images/hea_bg1.png) no-repeat 0 0;
+	background-size: cover; 
+	margin-top: 0.7rem;
+	padding: 0.45rem 0.8rem;
+
+}
+.upaybox{
+	display: block;
+	width: 4.6rem;
+	height: 2.5rem;
+	float: left;
+	border-left: 1px solid #6E5727;
+	overflow: hidden;
+}
+.upaytit{
+	width: 100%;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	font-size: 0.65rem;
+	text-align: center;
+	color: #fedfa5;
+
+}
+.upaynum{
+	width: 100%;
+	height: 1.4rem;
+	line-height: 1.8rem;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #fedfa5;
+
+}
+
+
+.myorderbox{
+	width: 20rem;
+	height: auto;
+	background: #fff;
+	padding:0.5rem;
+
+}
+.ordertit{
+	width: 100%;
+	height: 2.0rem;
+	line-height: 2.0rem;
+	border-bottom: 1px solid #cecece;
+	position: relative;
+	padding-left: 0.5rem;
+}
+.ordertit h3{
+	color: #000;
+	font-size: 0.8rem;
+
+}
+.ordermore{
+	display: block;
+	width: 6rem;
+	height: 2.0rem;
+	line-height: 2.0rem;
+	color: #969696;
+	position: absolute;
+	top: 0;
+	right: 0.5rem;
+	font-size: 0.7rem;
+	text-align: right;
+	padding-right: 1rem;
+}
+.ordermore::after{
+	content: '';
+	width: 0.8rem;
+	height: 0.8rem;
+	position: absolute;
+	top: 0.6rem;
+	right: 0;
+	background: url(../images/more.png) no-repeat 0 0;
+	background-size: cover; 
+
+}
+
+.morderlist{
+	width: 100%;
+	height:3.6rem;
+	padding-top:0.68rem;
+}
+.morderlist ul li a{
+	display: block;
+	width: 3.8rem;
+	height: 3.6rem;
+	float: left;
+}
+.morderico{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 0 auto;
+}
+.mordertet{
+	width: 100%;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.68rem;
+	color: #333;
+	text-align: center;
+}
+
+.mding01{
+	background: url(../images/ding01.png) no-repeat 0 0;
+	background-size: cover;
+
+}
+
+.mding02{
+	background: url(../images/ding02.png) no-repeat 0 0;
+	background-size: cover;
+
+}
+
+.mping03{
+	background: url(../images/ping03.png) no-repeat 0 0;
+	background-size: cover;
+
+}
+
+.mshou04{
+	background: url(../images/shou04.png) no-repeat 0 0;
+	background-size: cover;
+
+}
+.mshou05{
+	background: url(../images/shou05.png) no-repeat 0 0;
+	background-size: cover;
+
+}
+
+
+.uadbox{
+	display: block;
+	width: 19rem;
+	height: 5.34375rem;
+	margin: 0.5rem auto;
+	border-radius: 5px;
+}
+
+.uadbox img{
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+.mtaskbox{
+	width: 19rem;
+	height: auto;
+	background: #fff;
+	margin:0.5rem auto;
+	border-radius: 5px;
+}
+.mtasktit{
+	width: 100%;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	padding-left: 0.5rem;
+}
+.mtasktit h3{
+	color: #000;
+	font-size: 0.8rem;
+
+}
+
+.mtasklist{
+	width: 19rem;
+	height: 3.6rem;
+}
+.mtasklist ul li a{
+	display: block;
+	width: 6.3rem;
+	height: 3.6rem;
+	float: left;
+}
+.taskname{
+	width: 100%;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	font-size: 0.68rem;
+	text-align: center;
+	color: #888;
+}
+.taskstu{
+	width: 100%;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	font-size: 0.68rem;
+	text-align: center;
+	position: relative;
+	color: #000;
+}
+
+.taskmark{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fb3333;
+	position: absolute;
+	top: 0.2rem;
+	right:1.3rem;
+}
+
+
+
+.vipservice{
+	width: 19rem;
+	height: auto;
+	background: #fff;
+	margin:0.5rem auto;
+	border-radius: 5px;
+}
+.vipsertit{
+	width: 100%;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	padding-left: 0.5rem;
+}
+.vipsertit h3{
+	color: #000;
+	font-size: 0.8rem;
+
+}
+.vipserlist{
+	width: 19rem;
+	height: auto;
+
+}
+.vipserlist ul li a{
+	width: 4.75rem;
+	height: 4.0rem;
+	padding-top: 0.5rem;
+	float: left;
+}
+
+.vipsico{
+	width: 1.9rem;
+	height: 1.9rem;
+	margin:0 auto;
+}
+.vipstet{
+	width: 100%;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.7rem;
+	text-align: center;
+	color: #333;
+}
+.vips_fw01{
+	background: url(../images/fw01.png) no-repeat 0 0;
+	background-size: cover;
+}
+.vips_fw02{
+	background: url(../images/fw02.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.vips_fw03{
+	background: url(../images/fw03.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.vips_fw04{
+	background: url(../images/fw04.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.vips_fw05{
+	background: url(../images/fw05.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+
+
+.buschool{
+	width: 19rem;
+	height: auto;
+	background: #fff;
+	margin:0.5rem auto;
+	border-radius: 5px;
+}
+.buschooltit{
+	width: 100%;
+	height: 2.0rem;
+	line-height: 2.0rem;
+	padding-left: 0.5rem;
+}
+.buschool h3{
+	color: #000;
+	font-size: 0.8rem;
+
+}
+.busch_piclist{
+	width: 19rem;
+	height: auto;
+}
+
+.busch_piclist ul li a{
+	display: block;
+	width: 9.5rem;
+	height: 6.1875rem;
+	float: left;
+	padding: 0.5rem 0.25rem;
+	border-radius: 5px;
+}
+.busch_piclist ul li a img{
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.busch_list{
+	width: 19rem;
+	height: auto;
+	padding-top: 0.5rem;
+}
+.busch_list ul li a{
+	display: block;
+	width: 9.5rem;
+	height: 5rem;
+	float: left;
+	border:1px solid #f0f0f0;
+	position: relative;
+	padding-left: 4rem;
+	padding-top:1.4rem;
+}
+
+
+.buschico{
+	width: 2.3rem;
+	height: 2.3rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 1.2rem;
+}
+.bushbtet{
+	width: 100%;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	
+}
+.bushbtet h4{
+	font-size: 0.8rem;
+	color: #333;
+
+}
+
+.bushstet{
+	width: 100%;
+	height: 1.0rem;
+	line-height: 1.0rem;
+	font-size: 0.7rem;
+	color: #969696;
+
+}
+
+.bus_ji01{
+	background: url(../images/ji01.png) no-repeat 0 0;
+	background-size: cover;
+}
+.bus_ji02{
+	background: url(../images/ji02.png) no-repeat 0 0;
+	background-size: cover;
+}
+.bus_ji03{
+	background: url(../images/ji03.png) no-repeat 0 0;
+	background-size: cover;
+}
+.bus_ji04{
+	background: url(../images/ji04.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+
+/*footer*/
+
+footer{
+				width: 100%;
+				height: 3.3rem;
+				position:fixed;
+				left: 0;
+				bottom: 0;
+				background: #f8f8f8;
+				border-top: 1px solid #f0f0f0;
+				z-index: 9999;
+
+			}
+			footer ul li{
+				list-style: none;
+			}
+
+			
+			footer ul li a{
+				display: block;
+				width: 20%;
+				height: 3.2rem;
+				float: left;
+				text-decoration: none;
+				padding-top: 0.2rem;
+			}
+
+			.ico_box{
+				width: 1.4rem;
+				height: 1.4rem;
+				margin: 0 auto;
+				
+			}
+
+			.foot_text{
+				width: 100%;
+				height: 1.5rem;
+				line-height: 1.8rem;
+				color: #969696;
+				font-size: 0.68rem;
+				text-align: center;
+			}
+
+			.ico_index{
+				background: url(../images/ico_index.png) no-repeat 0 0;
+				background-size: cover;
+
+			}
+
+			.ico_found{
+				background: url(../images/ico_found.png) no-repeat 0 0;
+				background-size: cover;
+
+			}
+
+			.ico_vip{
+				background: url(../images/ico_vip.png) no-repeat 0 0;
+				background-size: cover;
+
+			}
+
+			.ico_buy{
+				background: url(../images/ico_buy.png) no-repeat 0 0;
+				background-size: cover;
+
+			}
+
+			.ico_my{
+				background: url(../images/ico_my.png) no-repeat 0 0;
+				background-size: cover;
+
+			}
+			

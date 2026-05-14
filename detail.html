@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品详情 - 项目名称</title>
+    <style>
+      :root {
+        --text-main: #222;
+        --text-sub: #666;
+        --accent: #333;
+        --bg-body: #ffffff;
+      }
+
+      body {
+        font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        margin: 0;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        line-height: 1.6;
+      }
+
+      /* 顶部导航 */
+      .nav-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        box-sizing: border-box;
+        z-index: 100;
+        border-bottom: 1px solid #eee;
+      }
+      .back-btn {
+        text-decoration: none;
+        color: var(--text-main);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .back-btn:hover {
+        opacity: 0.7;
+      }
+
+      /* 主体布局：内容居中 */
+      .container {
+        max-width: 1000px;
+        margin: 80px auto 40px;
+        padding: 0 20px;
+      }
+
+      /* 项目头部信息 */
+      .project-header {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .project-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      .project-meta {
+        font-size: 14px;
+        color: var(--text-sub);
+      }
+      .tag {
+        display: inline-block;
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-right: 8px;
+        font-size: 12px;
+      }
+
+      /* 核心作品展示区 */
+      .project-content {
+        width: 100%;
+      }
+      .project-content img {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px; /* 图片间的间距 */
+        border-radius: 4px;
+        /* 模拟阴影 */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      /* 底部描述区 */
+      .project-description {
+        max-width: 700px;
+        margin: 60px auto;
+        border-top: 1px solid #eee;
+        padding-top: 40px;
+      }
+      .description-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      /* 响应式 */
+      @media (max-width: 768px) {
+        .project-title {
+          font-size: 22px;
+        }
+        .container {
+          margin-top: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-header">
+      <a href="index.html" class="back-btn">← 返回作品集</a>
+    </nav>
+
+    <div class="container">
+      <div class="project-header">
+        <h1 class="project-title">品牌视觉升级 & 包装设计 2024</h1>
+        <div class="project-meta">
+          <span class="tag">平面设计</span>
+          <span class="tag">品牌识别</span>
+          <span class="tag">插画</span>
+          <p>发布日期：2024年5月6日</p>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <img src="https://picsum.photos/1200/800?random=10" alt="展示图1" />
+        <img src="https://picsum.photos/1200/1600?random=11" alt="展示图2" />
+        <img src="https://picsum.photos/1200/800?random=12" alt="展示图3" />
+      </div>
+
+      <div class="project-description">
+        <h2 class="description-title">项目背景</h2>
+        <p>这里填写你的设计思路。例如：本次设计旨在通过极简主义的视觉语言，重新定义品牌在 Z 世代心目中的形象。我们采用了高饱和度的对比色，并结合了 3D 渲染元素...</p>
+
+        <h2 class="description-title">使用的工具</h2>
+        <p>Adobe Photoshop / Illustrator / Figma / Cinema 4D</p>
+      </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #999; font-size: 12px">© 2024 YourName Design. All Rights Reserved.</footer>
+  </body>
+</html>

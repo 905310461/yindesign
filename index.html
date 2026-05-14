@@ -1,238 +1,149 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>个人中心</title>
-		<meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
-		<meta name="msapplication-tap-highlight" content="no">
-		<link rel="stylesheet" type="text/css" href="./css/u_sty.css">
-		<script src="./js/jquery-3.0.0.min.js"></script>
-  		<script src="./js/jsfor_rem.js"></script>
-	</head>
-	<body style="background: #efefef;">
-		<div class="layout">
-			<div class="head_box">
-				<div class="u_headimg"><img src="images/hhhhh.png" alt=""></div>
-				<div class="uinfo_con">
-					<ul>
-						<li>ID:3001</li>
-						<li>赖圣金</li>
-						<li>级别：高级合伙人</li>
-					</ul>
-				</div>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的设计作品集</title>
+    <!-- 引入 Macy.js 用于瀑布流 -->
+    <script src="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js"></script>
+    <style>
+      :root {
+        --bg-color: #f4f4f4;
+        --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      body {
+        font-family: 'PingFang SC', sans-serif;
+        background: var(--bg-color);
+        margin: 0;
+        padding: 20px;
+      }
 
-				<div class="h_ewm"></div>	
-				<a href="#" class="daysign">
-					<div class="signcon">每日签到</div>
-				</a>
-				
-				<div class="upayde">
-					<div class="upaybox" style="border:none;">
-						<div class="upaytit">今天收益</div>
-						<div class="upaynum">￥1.40</div>
-						
-					</div>
-					<div class="upaybox">
-						<div class="upaytit">累计收益</div>
-						<div class="upaynum">￥4000.90</div>
-					</div>
-					<div class="upaybox">
-						<div class="upaytit">可提现收益</div>
-						<div class="upaynum">￥210.90</div>
-					</div>
-					<div class="upaybox">
-						<div class="upaytit">即将到账</div>
-						<div class="upaynum">￥450.60</div>
-					</div>
+      /* 导航栏 */
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      h1 {
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
 
-					<div class="clear"></div>
-				</div>
-					
-			</div>
+      /* 瀑布流容器 */
+      #macy-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-			<div class="myorderbox">
-				<div class="ordertit">
-					<h3>我的订单</h3>
-					<a href="#" class="ordermore">复销商城</a>
-				</div>	
-				<div class="morderlist">
-					<ul>
-						<li><a href="#">
-							<div class="morderico mding01"></div>
-							<div class="mordertet">商品订单</div>
-						</a></li>
-						<li><a href="#">
-							<div class="morderico mding02"></div>
-							<div class="mordertet">服务订单</div>
-						</a></li>
+      /* 作品卡片 */
+      .work-item {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 20px; /* 间距 */
+      }
+      .work-item:hover {
+        transform: translateY(-5px);
+      }
+      .work-item img {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
 
-						<li><a href="#">
-							<div class="morderico mping03"></div>
-							<div class="mordertet">订单评价</div>
-						</a></li>
+      .work-info {
+        padding: 12px;
+      }
+      .work-info h3 {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+      }
 
-						<li><a href="#">
-							<div class="morderico mshou04"></div>
-							<div class="mordertet">售后服务</div>
-						</a></li>
+      /* 响应式调整 */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DESIGN PORTFOLIO</h1>
+      <p>UI设计 / 平面 / H5</p>
+    </header>
 
-						<li><a href="#">
-							<div class="morderico mshou05"></div>
-							<div class="mordertet">收货地址</div>
-						</a></li>
-					</ul>
-				</div>
-			</div>
-		<!-- 广告 -->
-			<a href="#" class="uadbox"><img src="images/uc_ad01.jpg" alt=""></a>
-		
+    <!-- 作品列表 -->
+    <div id="macy-container">
+      <!-- 模拟作品卡片，实际使用时建议通过 JS 循环生成 -->
+      <div class="work-item">
+        <img src="images/123.jpg" alt="作品" />
+        <div class="work-info"><h3>新年充值展架</h3></div>
+      </div>
+      <div class="work-item">
+        <img src="images/01.jpg" alt="作品" />
+        <div class="work-info"><h3>充值活动展架</h3></div>
+      </div>
+      <div class="work-item">
+        <img src="images/01.png" alt="作品" />
+        <div class="work-info"><h3>8月充值活动</h3></div>
+      </div>
 
-			<div class="mtaskbox">
-				<div class="mtasktit"><h3>我的任务</h3></div>
+      <div class="work-item">
+        <img src="images/03.png" alt="作品" />
+        <div class="work-info"><h3>积分商城小程序</h3></div>
+      </div>
 
-				<div class="mtasklist">
-					<ul>
-						<li><a href="#">
-							
-							<div class="taskstu">未完成 <div class="taskmark"></div></div>
+      <div class="work-item">
+        <img src="images/05.jpg" alt="作品" />
+        <div class="work-info"><h3>8月充值界面改版</h3></div>
+      </div>
+      <div class="work-item">
+        <img src="images/1080.jpg" alt="作品" />
+        <div class="work-info"><h3>8月充值活动展架</h3></div>
+      </div>
+      <div class="work-item">
+        <img src="images/08.png" alt="作品" />
+        <div class="work-info"><h3>保养活动海报</h3></div>
+      </div>
 
-							<div class="taskname">成为合伙人</div>
-						</a></li>
+      <div class="work-item">
+        <img src="images/ym.jpg" alt="作品" />
+        <div class="work-info"><h3>活动抽奖H5界面</h3></div>
+      </div>
+      <div class="work-item">
+        <img src="images/resune2.jpg" alt="作品" />
+        <div class="work-info"><h3>简历</h3></div>
+      </div>
+      <!-- 复制更多卡片... -->
+    </div>
 
-						<li><a href="#">
-							
-							<div class="taskstu">本月已完成</div>
+    <script>
+      // 初始化瀑布流
+      var macy = Macy({
+        container: '#macy-container',
+        trueOrder: false,
+        waitForImages: true,
+        margin: 20,
+        columns: 4, // 默认 4 列
+        breakAt: {
+          1200: 4,
+          940: 3,
+          520: 2,
+          400: 1
+        }
+      })
 
-							<div class="taskname">月度业绩奖励</div>
-						</a></li>
-
-						<li><a href="#" style="width: 6.4rem;">
-							
-							<div class="taskstu">本季度已达成</div>
-
-							<div class="taskname">季度分红奖励</div>
-						</a></li>
-						<div class="clear"></div>
-					</ul>
-				</div>
-			</div>
-		
-			<div class="vipservice">
-
-				<div class="vipsertit"><h3>会员服务</h3></div>
-
-				<div class="vipserlist">
-					<ul>
-						<li><a href="#">
-								<div class="vipsico vips_fw01"></div>
-								<div class="vipstet">二维码</div>
-							
-						</a></li>
-
-						<li><a href="#">
-								<div class="vipsico vips_fw02"></div>
-								<div class="vipstet">我的群组</div>
-							
-						</a></li>
-
-						<li><a href="#">
-								<div class="vipsico vips_fw03"></div>
-								<div class="vipstet">我的收益</div>
-							
-						</a></li>
-
-						<li><a href="#">
-								<div class="vipsico vips_fw04"></div>
-								<div class="vipstet">访客记录</div>
-							
-						</a></li>
-
-						<li><a href="#">
-								<div class="vipsico vips_fw05"></div>
-								<div class="vipstet">素材</div>
-							
-						</a></li>
-
-
-						<div class="clear"></div>
-					</ul>
-				</div>
-			</div>
-		
-
-			<div class="buschool">
-
-					<div class="buschooltit"><h3>商学院</h3></div>
-					<div class="busch_piclist">
-						<ul>
-							<li><a href="#"><img src="images/bus_b1.jpg" alt=""></a></li>
-							<li><a href="#"><img src="images/bus_b2.jpg" alt=""></a></li>
-
-							<div class="clear"></div>
-						</ul>
-					</div>
-
-					<div class="busch_list">
-						<ul>
-							<li><a href="" style="border-left: none;">
-									<div class="buschico bus_ji01"></div>
-									<div class="bushbtet"><h4>集市指南</h4></div>
-									<div class="bushstet">集市指南</div>
-							</a></li>
-							<li><a href="" style="border-right: none;">
-									<div class="buschico bus_ji02"></div>
-									<div class="bushbtet"><h4>新手入门</h4></div>
-									<div class="bushstet">新手入门</div>
-							</a></li>
-							<li><a href=""  style="border-left: none;">
-									<div class="buschico bus_ji03"></div>
-									<div class="bushbtet"><h4>初班必学</h4></div>
-									<div class="bushstet">初班必学</div>
-							</a></li>
-							<li><a href="" style="border-right: none;">
-									<div class="buschico bus_ji04"></div>
-									<div class="bushbtet"><h4>中班进阶</h4></div>
-									<div class="bushstet">中班进阶</div>
-							</a></li>
-							
-							<div class="clear"></div>
-						</ul>
-					</div>
-
-			</div>
-			
-
-
-		</div>
-
-		<footer>
-
-				<ul>
-					<li><a href="#">
-						<div class="ico_box ico_index"></div>
-						<div class="foot_text">首页</div>
-					</a></li>
-
-					<li><a href="#">
-						<div class="ico_box ico_found"></div>
-						<div class="foot_text">发现</div>
-					</a></li>
-
-					<li><a href="#">
-						<div class="ico_box ico_vip"></div>
-						<div class="foot_text" style="color: #feb236;">会员中心</div>
-					</a></li>
-
-					<li><a href="#">
-						<div class="ico_box ico_buy"></div>
-						<div class="foot_text">集市袋</div>
-					</a></li>
-
-					<li><a href="#">
-						<div class="ico_box ico_my"></div>
-						<div class="foot_text">我的</div>
-					</a></li>
-				</ul>
-		</footer>	
-	</body>
+      // 跳转详情页逻辑（静态版演示）
+      function showDetail(title, imgUrl) {
+        // 实际开发中可以跳转到 detail.html?id=1
+        alert('即将进入《' + title + '》的具体展示页面')
+        // window.location.href = 'detail.html';
+      }
+    </script>
+  </body>
 </html>
